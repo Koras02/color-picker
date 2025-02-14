@@ -42,3 +42,27 @@ button:hover {
 button:click {
   background-color: antiquewhite;
 }
+
+.menu {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  width: 100%;
+  max-width: 300px;
+}
+
+.menu.hidden {
+  display: none;
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 1.5s;
+}

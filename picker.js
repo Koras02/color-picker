@@ -3,6 +3,8 @@ const colorInput = document.getElementById("colorInput");
 const searchButton = document.getElementById("searchButton");
 const languageSelect = document.getElementById("language");
 const title = document.getElementById("title");
+const menuButton = document.getElementById("menuButton");
+const menu = document.getElementById("menu");
 
 // Language
 fetch("language.json")
@@ -66,4 +68,9 @@ languageSelect.addEventListener("change", (event) => {
   title.textContent = translations[selectedLanguage].title;
   colorInput.placeholder = translations[selectedLanguage].placeholder;
   searchButton.textContent = translations[selectedLanguage].buttonText;
+});
+
+// Menu toggle
+menuButton.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
 });
