@@ -10,6 +10,10 @@
   margin: 20px auto;
 }
 
+.language-selector {
+  margin-bottom: 20px;
+}
+
 input {
   padding: 10px;
   width: 100%;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,15 @@
   </head>
   <body>
     <div class="container">
-      <h1>Color Picker</h1>
+      <div class="language-selector">
+        <label for="language">Language Select</label>
+        <select id="language">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
+        </select>
+      </div>
+      <h1 id="title">Color Picker</h1>
       <div id="colorDis" class="color-pick"></div>
       <input
         type="text"

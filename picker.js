@@ -1,6 +1,29 @@
 const colorDisplay = document.getElementById("colorDis");
 const colorInput = document.getElementById("colorInput");
 const searchButton = document.getElementById("searchButton");
+const languageSelect = document.getElementById("language");
+const title = document.getElementById("title");
+
+// Language
+fetch("language.json")
+  .then((response) => response.json())
+  .then((translations) => {
+    // default language
+    const defaultLanguage = "ko";
+    setLanguage(translations, defaultLanguage);
+
+    languageSelect.addEventListener("change", (event) => {
+      const selectedLanguage = event.target.value;
+      setLanguage(translations, selectedLanguage);
+    });
+  });
+
+// language setting function
+const setLanguage = (translations, lang) => {
+  title.textContent = translations[lang].title;
+  colorInput.placeholder = translations[lang].placeholder;
+  searchButton.textContent = translations[lang].buttonText;
+};
 
 // use Mouse Pick
 colorDisplay.addEventListener("mousemove", (event) => {
@@ -34,4 +57,13 @@ colorInput.addEventListener("keydown", (event) => {
     setColor(inputColor);
     console.log("23");
   }
+});
+
+// Language Select Event
+languageSelect.addEventListener("change", (event) => {
+  const selectedLanguage = event.target.value;
+
+  title.textContent = translations[selectedLanguage].title;
+  colorInput.placeholder = translations[selectedLanguage].placeholder;
+  searchButton.textContent = translations[selectedLanguage].buttonText;
 });

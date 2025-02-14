@@ -1,0 +1,17 @@
+{
+  "ko": {
+    "title": "RGB/RGBA 색상 선택기",
+    "placeholder": "RGB 또는 RGBA 입력",
+    "buttonText": "색상 검색하기"
+  },
+  "en": {
+    "title": "RGB/RGBA Color Picker",
+    "placeholder": "Enter RGB or RGBA (e.g., rgb(255, 0, 0))",
+    "buttonText": "Search Color"
+  },
+  "jp": {
+    "title": "RGB/RGBA カラーピッカー",
+    "placeholder": "RGB または RGBA を入力 (例: rgb(255, 0, 0))",
+    "buttonText": "色を検索"
+  }
+}
